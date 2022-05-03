@@ -54,7 +54,7 @@ void Graph::setEdgesCount(const unsigned int e) {
 void Graph::insertEdge(const Edge & edge) {
   if (edge.src >= V || edge.dst >= V)
     throw "out of range";
-  else if (static_cast<int>(edges.size()) == E)
+  else if (static_cast<unsigned int>(edges.size()) == E)
     throw "cannot insert more elemnts";
   edges.push_back(edge);
 }
