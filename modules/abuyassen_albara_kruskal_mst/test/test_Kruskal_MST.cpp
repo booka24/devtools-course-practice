@@ -9,8 +9,8 @@
 #include "include/Kruskal_MST.h"
 
 TEST(Kruskal_Algorithm, Trows_if_edge_out_of_range) {
-  unsigned int V = 3;
-  unsigned int E = 3;
+  int V = 3;
+  int E = 3;
   int src = 4;
   int dst = 5;
   int weight = 3;
@@ -21,8 +21,8 @@ TEST(Kruskal_Algorithm, Trows_if_edge_out_of_range) {
 }
 
 TEST(Kruskal_Algorithm, Throws_if_full) {
-  unsigned int V = 3;
-  unsigned int E = 3;
+  int V = 3;
+  int E = 3;
   int srcs[] = { 0, 1, 2 };
   int dsts[] = { 1, 2, 0 };
   int weights[] = { 3, 2, 1 };
@@ -38,8 +38,8 @@ TEST(Kruskal_Algorithm, Throws_if_full) {
 }
 
 TEST(Kruskal_Algorithm, set_new_number_of_edges) {
-  unsigned int V = 3;
-  unsigned int E = 3;
+  int V = 3;
+  int E = 3;
   int srcs[] = { 0, 1, 2 };
   int dsts[] = { 1, 2, 0 };
   int weights[] = { 3, 2, 1 };
@@ -55,8 +55,8 @@ TEST(Kruskal_Algorithm, set_new_number_of_edges) {
 }
 
 TEST(Kruskal_Algorithm, cannot_set_smaller_number_of_edges) {
-  unsigned int V = 3;
-  unsigned int E = 3;
+  int V = 3;
+  int E = 3;
   int srcs[] = { 0, 1, 2 };
   int dsts[] = { 1, 2, 0 };
   int weights[] = { 3, 2, 1 };
@@ -66,8 +66,7 @@ TEST(Kruskal_Algorithm, cannot_set_smaller_number_of_edges) {
     Edge temp(srcs[i], dsts[i], weights[i]);
     sample.insertEdge(temp);
   }
-  sample.setEdgesCount(4);
-  EXPECT_ANY_THROW(sample.setEdgesCount(2););
+  EXPECT_ANY_THROW(sample.setEdgesCount(2));
 }
 
 TEST(Kruskal_Algorithm, can_get_vertices) {
@@ -89,8 +88,8 @@ TEST(Kruskal_Algorithm, can_get_edges) {
 }
 
 TEST(Kruskal_Algorithm, can_insert_edge) {
-  unsigned int V = 2;
-  unsigned int E = 1;
+  int V = 2;
+  int E = 1;
   Edge edge(0, 1, 0);
 
   Graph sample(E, V);
@@ -100,8 +99,8 @@ TEST(Kruskal_Algorithm, can_insert_edge) {
 }
 
 TEST(Kruskal_Algorithm, contains_function_returns_false_if_empty) {
-  unsigned int V = 3;
-  unsigned int E = 3;
+  int V = 3;
+  int E = 3;
   Edge edge(0, 1, 2);
   Graph sample(E, V);
 
@@ -109,8 +108,8 @@ TEST(Kruskal_Algorithm, contains_function_returns_false_if_empty) {
 }
 
 TEST(Kruskal_Algorithm, Kruskal_works) {
-  unsigned int V = 5;
-  unsigned int E = 5;
+  int V = 5;
+  int E = 5;
   int srcs[] = { 0, 1, 2, 3, 4 };
   int dsts[] = { 1, 2, 3, 4, 0 };
   int weights[] = { 2, 2, 1, 1, 3 };
@@ -134,8 +133,8 @@ TEST(Kruskal_Algorithm, Kruskal_works) {
 }
 
 TEST(Kruskal_Algorithm, always_have_correct_size) {
-  unsigned int V = 3;
-  unsigned int E = 3;
+  int V = 3;
+  int E = 3;
   int srcs[] = { 0, 1, 2 };
   int dsts[] = { 1, 2, 0 };
   int weights[] = { 3, 2, 1 };
@@ -152,8 +151,8 @@ TEST(Kruskal_Algorithm, always_have_correct_size) {
 }
 
 TEST(Kruskal_Algorithm, avoiding_cycles) {
-  unsigned int V = 3;
-  unsigned int E = 3;
+  int V = 3;
+  int E = 3;
   int srcs[] = { 0, 1, 2 };
   int dsts[] = { 1, 2, 0 };
   int weights[] = { 3, 2, 1 };
@@ -170,8 +169,8 @@ TEST(Kruskal_Algorithm, avoiding_cycles) {
 }
 
 TEST(Kruskal_Algorithm, always_have_minimum_cast) {
-  unsigned int V = 5;
-  unsigned int E = 5;
+  int V = 5;
+  int E = 5;
   int srcs[] = { 0, 1, 2, 3, 4 };
   int dsts[] = { 1, 2, 3, 4, 0 };
   int weights[] = { 2, 2, 1, 1, 3 };
