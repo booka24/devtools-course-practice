@@ -174,7 +174,7 @@ TEST(Kruskal_Algorithm, always_have_minimum_cast) {
   int srcs[] = { 0, 1, 2, 3, 4 };
   int dsts[] = { 1, 2, 3, 4, 0 };
   int weights[] = { 2, 2, 1, 1, 3 };
-  unsigned int minimum_cast = 6;
+  int minimum_cast = 6;
 
   Graph sample(E, V);
   for (int i = 0; i < E; i++) {
