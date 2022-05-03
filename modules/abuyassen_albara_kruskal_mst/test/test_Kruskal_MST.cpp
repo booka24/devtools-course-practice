@@ -70,8 +70,8 @@ TEST(Kruskal_Algorithm, cannot_set_smaller_number_of_edges) {
 }
 
 TEST(Kruskal_Algorithm, can_get_vertices) {
-  unsigned int V = 3;
-  unsigned int E = 3;
+  int V = 3;
+  int E = 3;
 
   Graph sample(E, V);
 
@@ -79,8 +79,8 @@ TEST(Kruskal_Algorithm, can_get_vertices) {
 }
 
 TEST(Kruskal_Algorithm, can_get_edges) {
-  unsigned int V = 3;
-  unsigned int E = 3;
+  int V = 3;
+  int E = 3;
 
   Graph sample(E, V);
 
@@ -147,7 +147,7 @@ TEST(Kruskal_Algorithm, always_have_correct_size) {
 
   std::vector < Edge > result = sample.KruskalMST();
 
-  EXPECT_EQ(result.size(), V - 1);
+  EXPECT_EQ(static_cast<int>(result.size()), V - 1);
 }
 
 TEST(Kruskal_Algorithm, avoiding_cycles) {
