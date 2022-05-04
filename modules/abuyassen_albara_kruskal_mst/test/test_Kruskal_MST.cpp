@@ -200,8 +200,8 @@ TEST(Kruskal_Algorithm, edges_are_sortable) {
         result.push_back(Edge(srcs[i], dsts[i], weights[i]));
     sort(result.begin(), result.end(), comparator);
 
-    std::vector < Edge > check = { Edge(2,3,1), Edge(3,4,1),
-        Edge(0,1,2), Edge(1,2,2), Edge(4,0,3) };
+    std::vector < Edge > check = { Edge(2, 3, 1) , Edge(3, 4, 1),
+        Edge(0, 1, 2), Edge(1, 2, 2), Edge(4, 0, 3) };
 
     for (size_t i = 0; i < result.size(); i++)
         EXPECT_TRUE(result[i] == check[i]);
