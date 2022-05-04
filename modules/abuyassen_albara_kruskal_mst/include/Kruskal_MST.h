@@ -23,6 +23,8 @@ struct Edge {
   bool operator == (const Edge & a);
 };
 
+bool comparator(Edge a, Edge b);
+
 class Graph {
  public:
     Graph(const unsigned int edges_, const unsigned int vertices_);
@@ -48,7 +50,6 @@ class Graph {
     unsigned int E;  // number of edges
     std::vector < node > vertices;
     std::vector < Edge > edges;
-    friend bool comparator(Edge a, Edge b);
 };
 
 #endif  // MODULES_ABUYASSEN_ALBARA_KRUSKAL_MST_INCLUDE_KRUSKAL_MST_H_
