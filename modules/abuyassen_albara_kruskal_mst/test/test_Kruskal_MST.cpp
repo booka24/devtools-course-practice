@@ -189,3 +189,20 @@ TEST(Kruskal_Algorithm, always_have_minimum_cast) {
     cast += result[i].weight;
   EXPECT_EQ(cast, minimum_cast);
 }
+
+TEST(Kruskal_Algorithm, edges_are_sortable) {
+    int srcs[] = { 0, 1, 2, 3, 4 };
+    int dsts[] = { 1, 2, 3, 4, 0 };
+    int weights[] = { 2, 2, 1, 1, 3 };
+    std::vector < Edge > result;
+
+    for (int i = 0; i < 5; i++)
+        result.push_back(Edge(srcs[i], dsts[i], weights[i]));
+    sort(result.begin(), result.end(), comparator);
+
+    std::vector < Edge > check = { Edge(2,3,1), Edge(3,4,1),
+        Edge(0,1,2), Edge(1,2,2), Edge(4,0,3) };
+
+    for (size_t i = 0; i < result.size(); i++)
+        EXPECT_TRUE(result[i] == check[i]);
+}
