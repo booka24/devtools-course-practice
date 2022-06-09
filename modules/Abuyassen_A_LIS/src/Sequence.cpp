@@ -1,6 +1,7 @@
 // Copyright 2022 Abuyassen Albara
 
 #include <algorithm>
+#include <vector>
 #include "include/Sequence.h"
 
 Sequence::Sequence(int size) {
