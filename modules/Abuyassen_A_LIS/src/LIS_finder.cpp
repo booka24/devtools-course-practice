@@ -7,6 +7,7 @@
 #include <vector>
 #include <string>
 #include <sstream>
+#include <algorithm>
 #include <iterator>
 #include "include/Sequence.h"
 #include "include/LIS_finder.h"
