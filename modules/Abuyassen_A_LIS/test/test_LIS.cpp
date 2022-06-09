@@ -2,6 +2,7 @@
 
 #include <gtest/gtest.h>
 #include <vector>
+#include <algorithm>
 #include "include/Sequence.h"
 
 TEST(LIS, LIS_create_empty_TEST) {
